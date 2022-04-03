@@ -1,6 +1,7 @@
 import React from 'react'
 import './home.css'
 import { useState } from 'react';
+import BreakfastChoises from '../components/BreakfastChoises';
 
 export default function Home() {
     const [breakfast, setBreakfast] = useState(false);
@@ -10,7 +11,7 @@ export default function Home() {
         <div className='select'>
             <div className='select-ing-breakfast'>
                 <button onClick={() => setBreakfast(!breakfast)}>Breakfast</button>
-                {breakfast ? <div>Chedar</div> : null}
+                {breakfast ? <BreakfastChoises /> : null}
             </div>
             <div className="select-ing-meals">
                 <button onClick={() => setMeals(!meals)}>Meals</button>
