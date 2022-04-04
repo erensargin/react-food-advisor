@@ -1,22 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './home.css'
-import { useState } from 'react';
-import BreakfastChoises from '../components/BreakfastChoises';
+import Checkbox from '../components/Checkbox';
 
 export default function Home() {
-    const [breakfast, setBreakfast] = useState(false);
-    const [meals, setMeals] = useState(false);
+    const [selections, setSelections] = useState([]);
+    const [counter, setCounter] = useState(0);
+    const [checked, setChecked] = useState(false);
+
+    const items = ['1', '2', '3']
+
+    const handleOnChange = (e) => {
+        setSelections(e.target.name)
+        console.log(selections)
+    }
 
     return (
         <div className='select'>
-            <div className='select-ing-breakfast'>
-                <button onClick={() => setBreakfast(!breakfast)}>Breakfast</button>
-                {breakfast ? <BreakfastChoises /> : null}
-            </div>
-            <div className="select-ing-meals">
-                <button onClick={() => setMeals(!meals)}>Meals</button>
-                {meals ? <div>Meat</div> : null}
-            </div>
+            {items.map((item) => {
+                return <div>
+                    <Checkbox item={item} checked={checked} handleOnChange={handleOnChange}></Checkbox>
+                </div>
+            })}
+            {/* <p>{counter}</p> */}
         </div>
     )
 }
