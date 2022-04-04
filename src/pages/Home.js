@@ -3,11 +3,12 @@ import './home.css'
 import Checkbox from '../components/Checkbox';
 
 export default function Home() {
-    const [selections, setSelections] = useState(['']);
+    const [selections, setSelections] = useState([]);
+    const [breadtype, setBreadType] = useState('White')
 
-    const items = ['1', '2', '3']
+    const items = ['Cheese', 'Toma', '3']
 
-    const handleOnChange = (e) => {
+    const handleOnChangeCheckbox = (e) => {
         let sel = selections
         let find = sel.indexOf(e.target.name)
         if (find > -1) {
@@ -17,20 +18,34 @@ export default function Home() {
             sel.push(e.target.name)
         }
         setSelections(sel)
+        console.log(selections)
     }
 
     const isChecked = (item) => {
         selections.includes(item)
     }
 
+    const handleOnChangeSelect = (e) => {
+        setBreadType(e.target.value)
+    }
+
     return (
-        <div className='select'>
-            {items.map((item) => {
-                return <div>
-                    <Checkbox item={item} checked={isChecked(item)} handleOnChange={handleOnChange}></Checkbox>
+        <div className='home'>
+            <div className="breakfast">
+                <select name="bread" id="bread" onChange={handleOnChangeSelect}>
+                    <option value="white">White</option>
+                    <option value="wheat">Wheat</option>
+                    <option value="grain">Grain</option>
+                </select>
+                <div className="checkbox-container">
+                    {items.map((item) => {
+                        return <div>
+                            <Checkbox item={item} checked={isChecked(item)} handleOnChange={handleOnChangeCheckbox}></Checkbox>
+                        </div>
+                    })}
                 </div>
-            })}
-            {/* <p>{counter}</p> */}
+            </div>
+
         </div>
     )
 }

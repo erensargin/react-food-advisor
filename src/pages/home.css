@@ -1,3 +1,17 @@
-/* .select{
-    display: flex;
-} */
+.home{
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://previews.123rf.com/images/scyther5/scyther51703/scyther5170300380/74151964-comida-fondo-cocina-ingrediente-cocina-concepto-vegetariano-vegetal-salud-vista-tabla-tabla-en-blanc.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#bread{
+    height: auto;
+    width: 10%;
+    margin-top: 30%;
+    margin-bottom: 20px;
+}
+.checkbox-container{
+    width: 20%;
+    margin: 0 auto
+}
