@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './home.css'
 import Checkbox from '../components/Checkbox';
 
 export default function Home() {
     const [selections, setSelections] = useState(['']);
-    const [counter, setCounter] = useState(0);
-    const [checked, setChecked] = useState(false);
 
     const items = ['1', '2', '3']
 
