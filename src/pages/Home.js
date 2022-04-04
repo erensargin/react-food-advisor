@@ -21,11 +21,15 @@ export default function Home() {
         setSelections(sel)
     }
 
+    const isChecked = (item) => {
+        selections.includes(item)
+    }
+
     return (
         <div className='select'>
             {items.map((item) => {
                 return <div>
-                    <Checkbox item={item} checked={checked} handleOnChange={handleOnChange}></Checkbox>
+                    <Checkbox item={item} checked={isChecked(item)} handleOnChange={handleOnChange}></Checkbox>
                 </div>
             })}
             {/* <p>{counter}</p> */}
