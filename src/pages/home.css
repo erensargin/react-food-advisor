@@ -8,10 +8,20 @@
 #bread{
     height: auto;
     width: 10%;
-    margin-top: 30%;
     margin-bottom: 20px;
 }
 .checkbox-container{
     width: 20%;
     margin: 0 auto
+}
+.sandwich-image{
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    border-radius: 8%;
+}
+.breakfast{
+    padding-top: 20%;
 }
