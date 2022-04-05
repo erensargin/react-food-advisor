@@ -2,9 +2,15 @@ import React, { useState } from 'react'
 import './home.css'
 import Checkbox from '../components/Checkbox';
 
+//Material UI
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+
 export default function Home() {
     const [selections, setSelections] = useState([]);
-    const [breadtype, setBreadType] = useState('White')
+    const [breadtype, setBreadType] = useState('white')
 
     const items = ['Cheese', 'Toma', '3']
 
@@ -34,11 +40,24 @@ export default function Home() {
             <div className="breakfast">
                 <h3>Choose Your Sandwich Type</h3>
                 <img className='sandwich-image' src="https://media.istockphoto.com/photos/turkey-sandwich-with-tomato-and-lettuce-picture-id1256670482?k=20&m=1256670482&s=612x612&w=0&h=WF0PjDr4iFdVI6IjKQjvvJipZrLYWIwHiRRDlbEwsQs=" alt="sandwich image" />
-                <select name="bread" id="bread" onChange={handleOnChangeSelect}>
-                    <option value="white">White</option>
-                    <option value="wheat">Wheat</option>
-                    <option value="grain">Grain</option>
-                </select>
+
+                <FormControl id="bread" variant="filled" sx={{ m: 1, minWidth: 120 }}>
+                    <InputLabel id="demo-simple-select-filled-label">Bread</InputLabel>
+                    <Select
+                        labelId="demo-simple-select-filled-label"
+                        id="demo-simple-select-filled"
+                        value={breadtype}
+                        onChange={handleOnChangeSelect}
+                    >
+                        <MenuItem value="">
+                            <em>None</em>
+                        </MenuItem>
+                        <MenuItem value={'white'}>White</MenuItem>
+                        <MenuItem value={'wheat'}>Wheat</MenuItem>
+                        <MenuItem value={'grain'}>Grain</MenuItem>
+                    </Select>
+                </FormControl>
+
                 <div className="checkbox-container">
                     {items.map((item) => {
                         return <div>
