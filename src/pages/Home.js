@@ -49,9 +49,6 @@ export default function Home() {
                         value={breadtype}
                         onChange={handleOnChangeSelect}
                     >
-                        <MenuItem value="">
-                            <em>None</em>
-                        </MenuItem>
                         <MenuItem value={'white'}>White</MenuItem>
                         <MenuItem value={'wheat'}>Wheat</MenuItem>
                         <MenuItem value={'grain'}>Grain</MenuItem>
