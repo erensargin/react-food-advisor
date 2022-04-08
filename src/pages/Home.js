@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useReducer, useState } from 'react'
 import './home.css'
 import Checkbox from '../components/Checkbox';
 import { data } from '../data/recipies';
 import { Link } from "react-router-dom";
+import { useStateValue } from "../StateProvider";
 
 //Material UI
 import InputLabel from '@mui/material/InputLabel';
@@ -10,7 +11,9 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
+
 export default function Home() {
+    const [{ }, dispatch] = useStateValue();
     const [selections, setSelections] = useState([]);
     const [breadtype, setBreadType] = useState('white')
 
@@ -37,7 +40,8 @@ export default function Home() {
         setBreadType(e.target.value)
     }
 
-    const checkFood = () => {
+    const checkFood = (e) => {
+        e.preventDefault();
         let foods = []
         selections.map((sel) => {
             data.map((data) => {
@@ -47,6 +51,10 @@ export default function Home() {
 
         })
         console.log(foods)
+        dispatch({
+            type: "SET_FILTERED",
+            filtered: foods,
+        });
     }
 
     return (
