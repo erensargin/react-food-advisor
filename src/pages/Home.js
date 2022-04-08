@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './home.css'
 import Checkbox from '../components/Checkbox';
 import { data } from '../data/recipies';
+import { Link } from "react-router-dom";
 
 //Material UI
 import InputLabel from '@mui/material/InputLabel';
@@ -75,6 +76,7 @@ export default function Home() {
                         </div>
                     })}
                 </div>
+                <Link to={'./recipies'}>Find</Link>
                 <button onClick={checkFood} >Find Food</button>
             </div>
 
