@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './home.css'
 import Checkbox from '../components/Checkbox';
+import { data } from '../data/recipies';
 
 //Material UI
 import InputLabel from '@mui/material/InputLabel';
@@ -35,6 +36,18 @@ export default function Home() {
         setBreadType(e.target.value)
     }
 
+    const checkFood = () => {
+        let foods = []
+        selections.map((sel) => {
+            data.map((data) => {
+                let find = data.ingredients.includes(sel)
+                if (find) { foods.push(data) }
+            })
+
+        })
+        console.log(foods)
+    }
+
     return (
         <div className='home'>
             <div className="breakfast">
@@ -62,6 +75,7 @@ export default function Home() {
                         </div>
                     })}
                 </div>
+                <button onClick={checkFood} >Find Food</button>
             </div>
 
         </div>
