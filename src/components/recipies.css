@@ -1,3 +1,32 @@
 .container{
     display: flex;
+    background-color: rgba(110,105,95,0.4);
+    padding: 10px;
+}
+.left{
+    margin: 10px;
+    flex: 1;
+}
+.right{
+    flex: 2;
+}
+.img-left{
+    width: 60%;
+    margin-left: 150px;
+    opacity: 0.8;
+}
+.right-content{
+    display: flex;
+}
+.right-ul{
+    flex: 1;
+    list-style-type: none;
+}
+.right-prep{
+    flex: 2;
+    text-align: left;
+}
+.right-li{
+    text-align: left;
+    text-decoration: none;
 }
