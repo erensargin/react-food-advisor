@@ -1,6 +1,6 @@
 .container{
     display: flex;
-    background-color: rgba(110,105,95,0.5);
+    background-color: rgba(46, 44, 36, 0.3);
     padding: 10px;
 }
 .left{
@@ -14,10 +14,9 @@
     width: 60%;
     margin-left: 150px;
     opacity: 0.9;
+    border-radius: 8%;
 }
 .img-left:hover{
-    width: 60%;
-    margin-left: 150px;
     opacity: 1;
 }
 .right-content{

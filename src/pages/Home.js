@@ -84,7 +84,10 @@ export default function Home() {
                         </div>
                     })}
                 </div>
-                <Link to={'./recipies'}>Find</Link>
+                <button onClick={checkFood}>
+                    <Link to={'./recipies'}>Find</Link>
+                </button>
+
                 <button onClick={checkFood} >Find Food</button>
             </div>
 
