@@ -19,7 +19,7 @@ export default function RecipiesPage() {
         < div className='recipies' >
             {filtered.length > 0 ?
                 filtered.map((food) => {
-                    return <Recipies name={food.name} ingredients={food.ingredients} prep={food.prep} imgurl={food.imgurl} />
+                    return <Recipies id={food.id} name={food.name} ingredients={food.ingredients} prep={food.prep} imgurl={food.imgurl} />
                 }) :
                 fillArray()
             }

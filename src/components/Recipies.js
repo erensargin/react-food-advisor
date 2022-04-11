@@ -1,9 +1,12 @@
 import React from 'react'
+import { Link, Outlet } from 'react-router-dom'
 import "./recipies.css"
 
-export default function Recipies({ name, ingredients, prep, imgurl }) {
+export default function Recipies({ id, name, ingredients, prep, imgurl }) {
     return (
         <div className='container'>
+            <Link to={`/recipies/${id}`} >Link to the inner</Link>
+            <Outlet />
             <div className="left">
                 <img className='img-left' src={imgurl} alt="recipimage" />
             </div>
@@ -20,6 +23,7 @@ export default function Recipies({ name, ingredients, prep, imgurl }) {
                     <p className='right-prep'>{prep}</p>
                 </div>
             </div>
+
         </div>
     )
 }
