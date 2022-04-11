@@ -8,5 +8,25 @@ export const data = [
         name: 'Ham Sandwich',
         ingredients: ['ham', 'Cheese',],
         prep: 'Cut breads and put cheese and add ham',
-    }
+    },
+    {
+        name: 'Ham Sandwich',
+        ingredients: ['ham', 'Cheese',],
+        prep: 'Cut breads and put cheese and add ham',
+    },
+    {
+        name: 'Ham Sandwich',
+        ingredients: ['ham', 'Cheese',],
+        prep: 'Cut breads and put cheese and add ham',
+    },
+    {
+        name: 'Ham Sandwich',
+        ingredients: ['ham', 'Cheese',],
+        prep: 'Cut breads and put cheese and add ham',
+    },
+    {
+        name: 'Ham Sandwich',
+        ingredients: ['ham', 'Cheese',],
+        prep: 'Cut breads and put cheese and add ham',
+    },
 ]

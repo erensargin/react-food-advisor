@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react'
+import React, { useState } from 'react'
 import './home.css'
 import Checkbox from '../components/Checkbox';
 import { data } from '../data/recipies';
