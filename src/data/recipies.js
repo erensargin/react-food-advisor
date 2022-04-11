@@ -7,31 +7,31 @@ export const data = [
     },
     {
         name: 'Ham Sandwich',
-        ingredients: ['ham', 'Cheese',],
+        ingredients: ['Ham', 'Cheese',],
         prep: 'Cut breads and put cheese and add ham',
         imgurl: 'https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/2019-08/classic-sandwich-bread.jpg?itok=ZA2g6TUf'
     },
     {
         name: 'Ham Sandwich',
-        ingredients: ['ham', 'Cheese',],
+        ingredients: ['Ham', 'Cheese',],
         prep: 'Cut breads and put cheese and add ham',
         imgurl: 'https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/2019-08/classic-sandwich-bread.jpg?itok=ZA2g6TUf'
     },
     {
         name: 'Ham Sandwich',
-        ingredients: ['ham', 'Cheese',],
+        ingredients: ['Ham', 'Cheese',],
         prep: 'Cut breads and put cheese and add ham',
         imgurl: 'https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/2019-08/classic-sandwich-bread.jpg?itok=ZA2g6TUf'
     },
     {
         name: 'Ham Sandwich',
-        ingredients: ['ham', 'Cheese',],
+        ingredients: ['Ham', 'Cheese',],
         prep: 'Cut breads and put cheese and add ham',
         imgurl: 'https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/2019-08/classic-sandwich-bread.jpg?itok=ZA2g6TUf'
     },
     {
         name: 'Ham Sandwich',
-        ingredients: ['ham', 'Cheese',],
+        ingredients: ['Ham', 'Cheese',],
         prep: 'Cut breads and put cheese and add ham',
         imgurl: 'https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/2019-08/classic-sandwich-bread.jpg?itok=ZA2g6TUf'
     },

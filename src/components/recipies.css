@@ -1,6 +1,6 @@
 .container{
     display: flex;
-    background-color: rgba(110,105,95,0.4);
+    background-color: rgba(110,105,95,0.5);
     padding: 10px;
 }
 .left{
@@ -13,13 +13,18 @@
 .img-left{
     width: 60%;
     margin-left: 150px;
-    opacity: 0.8;
+    opacity: 0.9;
+}
+.img-left:hover{
+    width: 60%;
+    margin-left: 150px;
+    opacity: 1;
 }
 .right-content{
     display: flex;
 }
 .right-ul{
-    flex: 1;
+    flex: 0.7;
     list-style-type: none;
 }
 .right-prep{
@@ -29,4 +34,7 @@
 .right-li{
     text-align: left;
     text-decoration: none;
+}
+.right > h3 {
+    margin-left: -200px;
 }

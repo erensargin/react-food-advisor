@@ -8,7 +8,7 @@ export default function Recipies({ name, ingredients, prep, imgurl }) {
                 <img className='img-left' src={imgurl} alt="recipimage" />
             </div>
             <div className="right">
-                <h3>Name: {name}</h3>
+                <h3>{name}</h3>
                 <div className="right-content">
                     <ul className='right-ul'>
                         {ingredients.map((ing) => {
