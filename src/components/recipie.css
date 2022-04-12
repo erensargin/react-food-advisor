@@ -1,5 +1,11 @@
 .container2{
-    margin-top: 50px;
+    padding: 10px;
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://images.pexels.com/photos/2680270/pexels-photo-2680270.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    /* background-image: url("https://previews.123rf.com/images/scyther5/scyther51703/scyther5170300380/74151964-comida-fondo-cocina-ingrediente-cocina-concepto-vegetariano-vegetal-salud-vista-tabla-tabla-en-blanc.jpg"); */
+    background-size: cover;
+    background-position: center;
 
 }
 .right-ul2{
@@ -9,4 +15,11 @@
 }
 .right-li2{
     margin-top: 10px;
+}
+.img-left2{
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    width: 60%;
+    border-radius: 8%;
 }

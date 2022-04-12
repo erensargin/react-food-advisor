@@ -9,7 +9,7 @@ export default function Recipie() {
 
     return (<div className='container2'>
         <div className="left">
-            <img className='img-left' src={imgurl} alt="recipimage" />
+            <img className='img-left2' src={imgurl} alt="recipimage" />
         </div>
         <div className="">
             <h3>{name}</h3>

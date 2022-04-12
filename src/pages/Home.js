@@ -18,7 +18,7 @@ export default function Home() {
     const [selections, setSelections] = useState([]);
     const [breadtype, setBreadType] = useState('white')
 
-    const items = ['Cheese', 'Toma', '3']
+    const items = ['Cheese', 'Tomato', 'Chicken', 'Turkey', 'Pepperoni']
 
     const handleOnChangeCheckbox = (e) => {
         let sel = selections
