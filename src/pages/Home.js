@@ -13,6 +13,7 @@ import Select from '@mui/material/Select';
 
 
 export default function Home() {
+    // eslint-disable-next-line no-empty-pattern
     const [{ }, dispatch] = useStateValue();
     const [selections, setSelections] = useState([]);
     const [breadtype, setBreadType] = useState('white')

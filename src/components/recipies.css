@@ -30,8 +30,13 @@
     list-style-type: none;
 }
 .right-prep{
-    flex: 2;
+    flex: 3;
     text-align: left;
+    width : 100px;
+    overflow:hidden;
+    display:inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .right-li{
     text-align: left;

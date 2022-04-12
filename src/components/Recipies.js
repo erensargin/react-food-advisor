@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import "./recipies.css"
 
 export default function Recipies({ id, name, ingredients, prep, imgurl }) {
