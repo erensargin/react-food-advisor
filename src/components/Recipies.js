@@ -5,8 +5,6 @@ import "./recipies.css"
 export default function Recipies({ id, name, ingredients, prep, imgurl }) {
     return (
         <div className='container'>
-            <Link to={`/recipies/${id}`} >Link to the inner</Link>
-            <Outlet />
             <div className="left">
                 <img className='img-left' src={imgurl} alt="recipimage" />
             </div>
@@ -22,6 +20,7 @@ export default function Recipies({ id, name, ingredients, prep, imgurl }) {
                     </ul>
                     <p className='right-prep'>{prep}</p>
                 </div>
+                <Link to={`/recipies/${id}`} >For more</Link>
             </div>
 
         </div>

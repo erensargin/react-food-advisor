@@ -4,7 +4,7 @@ export const data = [
         name: 'Pilav',
         ingredients: ['rice', 'butter', 'oil'],
         prep: 'First boil the water then add rice in it',
-        imgurl: ''
+        imgurl: 'https://media.istockphoto.com/photos/cooked-rice-picture-id491090528?k=20&m=491090528&s=612x612&w=0&h=oKwbkVWhU_17ZBhB4v3SKOTGT85nmi2YS7KbPPa-x8o='
     },
     {
         id: 2,
@@ -21,3 +21,7 @@ export const data = [
         imgurl: 'https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/2019-08/classic-sandwich-bread.jpg?itok=ZA2g6TUf'
     },
 ]
+
+export function getData(id) {
+    return data.find((d) => d.id === id)
+}
