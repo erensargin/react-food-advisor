@@ -13,9 +13,9 @@ export default function Recipie() {
         </div>
         <div className="">
             <h3>{name}</h3>
-            <div className="right-content">
+            <div className="right-content2">
                 <ul className='right-ul2'>
-                    Ingredients
+                    <h4>Ingredients</h4>
                     {ingredients.map((ing) => {
                         return <li className='right-li2'>
                             {ing}
@@ -24,6 +24,9 @@ export default function Recipie() {
                 </ul>
                 <p className='right-prep2'>{prep}</p>
             </div>
+        </div>
+        <div className="comments">
+
         </div>
 
     </div>

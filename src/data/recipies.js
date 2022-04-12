@@ -2,7 +2,7 @@ export const data = [
     {
         id: 1,
         name: 'Pilav',
-        ingredients: ['rice', 'butter', 'oil'],
+        ingredients: ['Rice', 'Butter', 'Oil'],
         prep: 'First boil the water then add rice in it',
         imgurl: 'https://media.istockphoto.com/photos/cooked-rice-picture-id491090528?k=20&m=491090528&s=612x612&w=0&h=oKwbkVWhU_17ZBhB4v3SKOTGT85nmi2YS7KbPPa-x8o='
     },
