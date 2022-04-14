@@ -32,3 +32,9 @@
     text-decoration: none;
     color: black;
 }
+.chooseContainer{
+    display: flex;
+    width: 70%;
+    margin:30% auto;
+    justify-content: center;
+}

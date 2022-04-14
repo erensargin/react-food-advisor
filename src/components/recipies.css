@@ -2,6 +2,7 @@
     display: flex;
     background-color: rgba(46, 44, 36, 0.3);
     padding: 10px;
+    margin: 10px auto;
 }
 .left{
     margin: 10px;

@@ -65,7 +65,11 @@ export default function Home() {
                 :
                 <div onClick={setBreakfast}>Choose Breakfast</div>
             }
-
+            <div className="chooseContainer">
+                <div onClick={setBreakfast} className="chooseBreakfast">Breakfast</div>
+                <div className="chooseLunch">Lunch</div>
+                <div className="chooseDinner">Dinner</div>
+            </div>
             <Outlet />
         </div>
     )
