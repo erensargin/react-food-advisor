@@ -13,6 +13,7 @@ export default function Home() {
     const [{ }, dispatch] = useStateValue();
     const [selections, setSelections] = useState([]);
     const [breadtype, setBreadType] = useState('white')
+    const [isBreakfast, setIsBreakfast] = useState(false)
 
 
     const handleOnChangeCheckbox = (e) => {
@@ -53,9 +54,18 @@ export default function Home() {
         });
     }
 
+    const setBreakfast = () => {
+        setIsBreakfast(!isBreakfast)
+    }
+
     return (
         <div className='home'>
-            <Breakfast breadtype={breadtype} handleOnChangeSelect={handleOnChangeSelect} checkFood={checkFood} isChecked={isChecked} handleOnChangeCheckbox={handleOnChangeCheckbox} />
+            {isBreakfast ?
+                <Breakfast breadtype={breadtype} handleOnChangeSelect={handleOnChangeSelect} checkFood={checkFood} isChecked={isChecked} handleOnChangeCheckbox={handleOnChangeCheckbox} />
+                :
+                <div onClick={setBreakfast}>Choose Breakfast</div>
+            }
+
             <Outlet />
         </div>
     )
