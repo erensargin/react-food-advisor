@@ -38,8 +38,18 @@
     justify-content: space-evenly;
     padding: 10%;
 }
-img{
-    width: 90%;
+.chooseContainer > * > img{
+    width: 80%;
+    height: 70%;
     border-radius: 8%;
     cursor: pointer;
+}
+.chooseBreakfast{
+    flex: 1;
+}
+.chooseLunch{
+    flex: 1;
+}
+.chooseDinner{
+    flex: 1;
 }

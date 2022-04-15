@@ -70,11 +70,11 @@ export default function Home() {
                     </div>
                     <div className="chooseLunch">
                         <h4>Lunch</h4>
-                        <img src="https://img.taste.com.au/cA3aUeON/taste/2021/11/thermomix-better-for-you-banana-pancakes-174975-2.jpg" alt="breakfast" />
+                        <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/04/meal-prep.jpg?quality=82&strip=all" alt="lunch" />
                     </div>
                     <div className="chooseDinner">
                         <h4>Dinner</h4>
-                        <img src="https://img.taste.com.au/cA3aUeON/taste/2021/11/thermomix-better-for-you-banana-pancakes-174975-2.jpg" alt="breakfast" />
+                        <img src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_05/2736521/190131-stock-taco-bar-food-ew-1220p-2736521.jpg" alt="dinner" />
                     </div>
                 </div>
             }
