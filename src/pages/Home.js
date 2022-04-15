@@ -63,13 +63,21 @@ export default function Home() {
             {isBreakfast ?
                 <Breakfast breadtype={breadtype} handleOnChangeSelect={handleOnChangeSelect} checkFood={checkFood} isChecked={isChecked} handleOnChangeCheckbox={handleOnChangeCheckbox} />
                 :
-                <div onClick={setBreakfast}>Choose Breakfast</div>
+                <div className="chooseContainer">
+                    <div onClick={setBreakfast} className="chooseBreakfast">
+                        <h4>Breakfast</h4>
+                        <img src="https://img.taste.com.au/cA3aUeON/taste/2021/11/thermomix-better-for-you-banana-pancakes-174975-2.jpg" alt="breakfast" />
+                    </div>
+                    <div className="chooseLunch">
+                        <h4>Lunch</h4>
+                        <img src="https://img.taste.com.au/cA3aUeON/taste/2021/11/thermomix-better-for-you-banana-pancakes-174975-2.jpg" alt="breakfast" />
+                    </div>
+                    <div className="chooseDinner">
+                        <h4>Dinner</h4>
+                        <img src="https://img.taste.com.au/cA3aUeON/taste/2021/11/thermomix-better-for-you-banana-pancakes-174975-2.jpg" alt="breakfast" />
+                    </div>
+                </div>
             }
-            <div className="chooseContainer">
-                <div onClick={setBreakfast} className="chooseBreakfast">Breakfast</div>
-                <div className="chooseLunch">Lunch</div>
-                <div className="chooseDinner">Dinner</div>
-            </div>
             <Outlet />
         </div>
     )
