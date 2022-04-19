@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useStateValue } from "../StateProvider";
 import Recipies from "../components/Recipies"
 import "./recipiespage.css"
@@ -7,6 +7,25 @@ import { data } from '../data/recipies';
 export default function RecipiesPage() {
     const [{ filtered }, dispatch] = useStateValue();
     console.log(filtered)
+
+    useEffect(() => {
+        async function getRecipies() {
+            const response = await fetch(`http://localhost:5005/records/`);
+
+            if (!response.ok) {
+                const message = `An error occurred: ${response.statusText}`;
+                window.alert(message);
+                return;
+            }
+
+            const recipies = await response.json();
+            console.log(recipies);
+        }
+
+        getRecipies();
+
+        return;
+    }, []);
 
     const fillArray = () => {
         dispatch({

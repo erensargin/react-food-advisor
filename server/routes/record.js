@@ -23,6 +23,17 @@ recordRoutes.route("/record").get(function (req, res) {
             res.json(result);
         });
 });
+// This section will help you get a list of all the records.
+recordRoutes.route("/records").get(function (req, res) {
+    let db_connect = dbo.getDb("recipies");
+    db_connect
+        .collection("tariffs")
+        .find({})
+        .toArray(function (err, result) {
+            if (err) throw err;
+            res.json(result);
+        });
+});
 
 // This section will help you get a single record by id
 recordRoutes.route("/record/:id").get(function (req, res) {
