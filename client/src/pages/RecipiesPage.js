@@ -19,7 +19,7 @@ export default function RecipiesPage() {
             }
 
             const recipies = await response.json();
-            console.log(recipies);
+            fillArray(recipies)
         }
 
         getRecipies();
@@ -27,10 +27,10 @@ export default function RecipiesPage() {
         return;
     }, []);
 
-    const fillArray = () => {
+    const fillArray = (recipies) => {
         dispatch({
             type: "SET_FILTERED",
-            filtered: data,
+            filtered: recipies,
         });
     }
 
@@ -38,7 +38,7 @@ export default function RecipiesPage() {
         < div className='recipies' >
             {filtered.length > 0 ?
                 filtered.map((food) => {
-                    return <Recipies id={food.id} name={food.name} ingredients={food.ingredients} prep={food.prep} imgurl={food.imgurl} />
+                    return <Recipies id={food._id} name={food.name} ingredients={food.ingredients} prep={food.prep} imgurl={food.imgurl} />
                 }) :
                 fillArray()
             }
