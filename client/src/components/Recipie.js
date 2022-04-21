@@ -1,12 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 import { getData } from '../data/recipies';
 import "./recipie.css"
 
 export default function Recipie() {
     let params = useParams();
-    let { imgurl, name, ingredients, prep } = getData(parseInt(1, 10));
     let id = params.recipiesid
+    // let { imgurl, name, ingredients, prep } = getData(parseInt(1, 10));
+    const [imgurl, setImgurl] = useState("");
+    const [name, setName] = useState("");
+    const [ingredients, setIngredients] = useState(['']);
+    const [prep, setPrep] = useState("");
 
     useEffect(() => {
         async function getRecipies() {
@@ -19,7 +23,10 @@ export default function Recipie() {
             }
 
             const recipies = await response.json();
-            console.log(recipies)
+            setImgurl(recipies.imgurl);
+            setName(recipies.name);
+            setIngredients(recipies.ingredients);
+            setPrep(recipies.prep);
 
         }
 
