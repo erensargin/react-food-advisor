@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useStateValue } from "../StateProvider";
 import Recipies from "../components/Recipies"
 import "./recipiespage.css"
-import { data } from '../data/recipies';
 
 export default function RecipiesPage() {
+    // eslint-disable-next-line no-unused-vars
     const [{ filtered }, dispatch] = useStateValue();
+    const [all, setAll] = useState([]);
     console.log(filtered)
 
     useEffect(() => {
@@ -19,7 +20,7 @@ export default function RecipiesPage() {
             }
 
             const recipies = await response.json();
-            fillArray(recipies)
+            setAll(recipies)
         }
 
         getRecipies();
@@ -27,20 +28,15 @@ export default function RecipiesPage() {
         return;
     }, []);
 
-    const fillArray = (recipies) => {
-        dispatch({
-            type: "SET_FILTERED",
-            filtered: recipies,
-        });
-    }
-
     return (
         < div className='recipies' >
             {filtered.length > 0 ?
                 filtered.map((food) => {
                     return <Recipies id={food._id} name={food.name} ingredients={food.ingredients} prep={food.prep} imgurl={food.imgurl} />
                 }) :
-                fillArray()
+                all.map((food) => {
+                    return <Recipies id={food._id} name={food.name} ingredients={food.ingredients} prep={food.prep} imgurl={food.imgurl} />
+                })
             }
         </div >
     )
