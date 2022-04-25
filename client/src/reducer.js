@@ -1,5 +1,6 @@
 export const initialState = {
     filtered: [],
+    all: [],
     counter: 0,
 };
 
@@ -11,6 +12,12 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 filtered: action.filtered,
+
+            };
+        case "SET_ALL":
+            return {
+                ...state,
+                all: action.all,
 
             };
         /* case "SET_USER":

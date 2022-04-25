@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './home.css'
 import { data } from '../data/recipies';
 import { Outlet, Link } from "react-router-dom";
@@ -13,8 +13,33 @@ export default function Home() {
     const [{ }, dispatch] = useStateValue();
     const [selections, setSelections] = useState([]);
     const [breadtype, setBreadType] = useState('white')
+    const [total, setTotal] = useState([])
     const [isBreakfast, setIsBreakfast] = useState(false)
 
+
+
+    useEffect(() => {
+        async function getRecipies() {
+            const response = await fetch(`http://localhost:5005/records/`);
+
+            if (!response.ok) {
+                const message = `An error occurred: ${response.statusText}`;
+                window.alert(message);
+                return;
+            }
+
+            const recipies = await response.json();
+            setTotal(recipies)
+            dispatch({
+                type: "SET_ALL",
+                all: recipies,
+            });
+        }
+
+        getRecipies();
+
+        return;
+    }, []);
 
     const handleOnChangeCheckbox = (e) => {
         let sel = selections
