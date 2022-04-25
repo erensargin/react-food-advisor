@@ -10,13 +10,10 @@ import Breakfast from '../components/home/Breakfast';
 
 export default function Home() {
     // eslint-disable-next-line no-empty-pattern
-    const [{ }, dispatch] = useStateValue();
+    const [{ all }, dispatch] = useStateValue();
     const [selections, setSelections] = useState([]);
     const [breadtype, setBreadType] = useState('white')
-    const [total, setTotal] = useState([])
     const [isBreakfast, setIsBreakfast] = useState(false)
-
-
 
     useEffect(() => {
         async function getRecipies() {
@@ -29,7 +26,6 @@ export default function Home() {
             }
 
             const recipies = await response.json();
-            setTotal(recipies)
             dispatch({
                 type: "SET_ALL",
                 all: recipies,
@@ -66,8 +62,9 @@ export default function Home() {
         e.preventDefault();
         let foods = []
         selections.map((sel) => {
-            data.map((data) => {
+            all.map((data) => {
                 let find = data.ingredients.includes(sel)
+                console.log(find)
                 if (find) { foods.push(data) }
             })
 

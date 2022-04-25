@@ -11,7 +11,7 @@ export default function RecipiesPage(total) {
         < div className='recipies' >
             {filtered.length > 0 ?
                 filtered.map((food) => {
-                    return <Recipies id={food.id} name={food.name} ingredients={food.ingredients} prep={food.prep} imgurl={food.imgurl} />
+                    return <Recipies id={food._id} name={food.name} ingredients={food.ingredients} prep={food.prep} imgurl={food.imgurl} />
                 }) :
                 all.map((food) => {
                     return <Recipies id={food._id} name={food.name} ingredients={food.ingredients} prep={food.prep} imgurl={food.imgurl} />
