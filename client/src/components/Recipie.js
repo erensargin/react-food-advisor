@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
-import { getData } from '../data/recipies';
 import "./recipie.css"
 
 export default function Recipie() {
     let params = useParams();
     let id = params.recipiesid
-    // let { imgurl, name, ingredients, prep } = getData(parseInt(1, 10));
     const [imgurl, setImgurl] = useState("");
     const [name, setName] = useState("");
     const [ingredients, setIngredients] = useState(['']);

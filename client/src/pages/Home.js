@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './home.css'
-import { data } from '../data/recipies';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { useStateValue } from "../StateProvider";
 
 
@@ -14,6 +13,8 @@ export default function Home() {
     const [selections, setSelections] = useState([]);
     const [breadtype, setBreadType] = useState('white')
     const [isBreakfast, setIsBreakfast] = useState(false)
+    const [isLunch, setIsLunch] = useState(false)
+    const [isDinner, setIsDinner] = useState(false)
 
     useEffect(() => {
         async function getRecipies() {
@@ -79,6 +80,12 @@ export default function Home() {
     const setBreakfast = () => {
         setIsBreakfast(!isBreakfast)
     }
+    const setLunch = () => {
+        setIsLunch(!isLunch)
+    }
+    const setDinner = () => {
+        setIsDinner(!isDinner)
+    }
 
     return (
         <div className='home'>
@@ -90,11 +97,11 @@ export default function Home() {
                         <h4>Breakfast</h4>
                         <img src="https://img.taste.com.au/cA3aUeON/taste/2021/11/thermomix-better-for-you-banana-pancakes-174975-2.jpg" alt="breakfast" />
                     </div>
-                    <div className="chooseLunch">
+                    <div onClick={setBreakfast} className="chooseLunch">
                         <h4>Lunch</h4>
                         <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/04/meal-prep.jpg?quality=82&strip=all" alt="lunch" />
                     </div>
-                    <div className="chooseDinner">
+                    <div onClick={setBreakfast} className="chooseDinner">
                         <h4>Dinner</h4>
                         <img src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_05/2736521/190131-stock-taco-bar-food-ew-1220p-2736521.jpg" alt="dinner" />
                     </div>
