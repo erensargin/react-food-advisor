@@ -104,7 +104,7 @@ export default function Home() {
                             <h4>Lunch</h4>
                             <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/04/meal-prep.jpg?quality=82&strip=all" alt="lunch" />
                         </div>
-                        <div onClick={setBreakfast} className="chooseDinner">
+                        <div onClick={setDinner} className="chooseDinner">
                             <h4>Dinner</h4>
                             <img src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_05/2736521/190131-stock-taco-bar-food-ew-1220p-2736521.jpg" alt="dinner" />
                         </div>

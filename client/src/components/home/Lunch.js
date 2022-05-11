@@ -17,7 +17,7 @@ export default function Lunch({ handleOnChangeSelect, checkFood, isChecked, hand
         <div>
             <div className="breakfast">
                 <h3>Choose Your Lunch Type</h3>
-                <img className='sandwich-image' src="https://media.istockphoto.com/photos/turkey-sandwich-with-tomato-and-lettuce-picture-id1256670482?k=20&m=1256670482&s=612x612&w=0&h=WF0PjDr4iFdVI6IjKQjvvJipZrLYWIwHiRRDlbEwsQs=" alt="sandwich" />
+                <img className='sandwich-image' src="https://hips.hearstapps.com/del.h-cdn.co/assets/17/41/1507827786-buddha-bowls-delish-1.jpg" alt="lunch" />
 
                 <div className="checkbox-container">
                     {items.map((item) => {
